@@ -11,7 +11,7 @@ html,
 body {
     position: relative;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     font-family: 'Space Mono', monospace;
     background: #000;
     color: #fff;
@@ -20,7 +20,7 @@ body {
 body::before {
     content: '';
     background-image: url('./icons/patternpad.svg');
-    background-size: cover;
+    /* background-size: cover; */
     position: absolute;
     top: 0px;
     right: 0px;
@@ -59,4 +59,7 @@ li {
 
 a {
     text-decoration: none;
+}
+::-webkit-scrollbar {
+    display: none;
 }
