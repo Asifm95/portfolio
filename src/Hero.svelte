@@ -16,27 +16,21 @@
 </script>
 
 <style lang="scss">
+    @import './styles/theme.scss';
     .hero {
         position: relative;
-        height: 100vh;
-        width: 100%;
+        @include box-dim(100%, 100vh);
+
         & .container {
-            max-width: 90%;
-            margin: 0 auto;
-            width: 1280px;
-            flex-direction: column;
-            display: flex;
+            @include container;
+            @include flex(initial, initial, $direction: column);
             height: 100%;
             position: relative;
             & .hero-content {
-                display: flex;
-                align-items: flex-end;
+                @include flex(initial, flex-end);
+                @include position(absolute, $top: 50%);
+                @include box-dim(100%, 140px);
                 padding-bottom: 60px;
-                position: absolute;
-                height: 140px;
-                width: 100%;
-                // bottom: 0;
-                top: 50%;
                 backface-visibility: hidden;
                 opacity: 1;
                 & .title {
@@ -51,6 +45,10 @@
                     }
                 }
             }
+            & .hero-down {
+                @include position(absolute, $bottom: 0);
+                padding-bottom: 60px;
+            }
         }
     }
 </style>
@@ -63,5 +61,6 @@
                 <span class="typed" bind:this={el} />
             </h1>
         </div>
+        <span class="hero-down"><i data-feather="chevron-down" /></span>
     </div>
 </div>

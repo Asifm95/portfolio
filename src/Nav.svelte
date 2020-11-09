@@ -1,41 +1,41 @@
 <script>
-    const links = [
-        { id: 1, ref: '#about', label: 'about' },
-        { id: 2, ref: '#showcase', label: 'Showcase' },
-        { id: 3, ref: '#contact', label: 'Contact' },
-        { id: 4, ref: 'https://github.com/Asifm95', label: 'Asifm95' },
-    ];
+    import { links } from './model/links';
+
+    let ref;
+    let scrolled;
+
+    const handleScroll = (e) => {
+        var s = window.scrollY;
+        scrolled = s > 0;
+    };
 </script>
 
 <style lang="scss">
+    @import './styles/theme.scss';
     .nav {
         position: fixed;
-        height: 140px;
-        width: 100%;
+        @include box-dim(100%, 140px);
         z-index: 4;
+        transition: all 0.4s ease;
+        &.scrolled {
+            background: black;
+            height: 90px;
+        }
         & .container {
-            display: flex;
-            justify-content: space-between;
             top: 0;
-            align-items: center;
             height: 100%;
-            max-width: 90%;
-            margin: 0 auto;
-            width: 1280px;
-
+            @include flex(space-between, center);
+            @include container;
             & .logo {
-                width: 60px;
-                height: 55px;
+                @include box-dim(60px, 55px);
                 & img {
-                    width: 100%;
-                    height: 100%;
+                    @include box-dim;
                 }
             }
 
             & .nav-right {
-                display: flex;
+                @include flex;
                 height: 100%;
-                align-items: center;
                 & .nav-link {
                     padding: 0 24px;
                     text-transform: capitalize;
@@ -51,7 +51,9 @@
     }
 </style>
 
-<nav class="nav">
+<svelte:window on:scroll={handleScroll} />
+
+<nav class="nav" class:scrolled bind:this={ref}>
     <div class="container">
         <a href="/" class="logo">
             <img src="icons/signature1.svg" alt="asif" />

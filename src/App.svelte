@@ -1,6 +1,12 @@
 <script>
     import Nav from './Nav.svelte';
     import Hero from './Hero.svelte';
+    import About from './About.svelte';
+    import Showcase from './Showcase.svelte';
+    import feather from 'feather-icons';
+    import { onMount } from 'svelte';
+
+    onMount(() => feather.replace());
 </script>
 
 <style lang="scss">
@@ -13,4 +19,6 @@
 <main>
     <Nav />
     <Hero />
+    <About />
+    <Showcase />
 </main>
