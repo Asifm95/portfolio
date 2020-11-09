@@ -1,0 +1,62 @@
+* {
+    text-rendering: optimizeSpeed;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: 'Space Mono', monospace;
+    background: #000;
+    color: #fff;
+}
+
+body::before {
+    content: '';
+    background-image: url('./icons/patternpad.svg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.1;
+}
+
+p,
+input,
+a {
+    font-family: 'Space Mono', monospace;
+    letter-spacing: -0.4px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+ul,
+ol,
+li {
+    font-weight: normal;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
