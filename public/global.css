@@ -59,6 +59,7 @@ li {
 
 a {
     text-decoration: none;
+    color: white;
 }
 ::-webkit-scrollbar {
     display: none;
