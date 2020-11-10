@@ -3,6 +3,7 @@
     import Hero from './Hero.svelte';
     import About from './About.svelte';
     import Showcase from './Showcase.svelte';
+    import Footer from './Footer.svelte';
     import feather from 'feather-icons';
     import { onMount } from 'svelte';
 
@@ -21,4 +22,5 @@
     <Hero />
     <About />
     <Showcase />
+    <Footer />
 </main>
