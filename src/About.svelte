@@ -30,9 +30,9 @@
     }
 </style>
 
-<div class="container">
+<div class="container" id="about">
     <div class="content-block">
-        <h1 class="title" id="about">About me</h1>
+        <h1 class="title">About me</h1>
 
         <div class="content">
             <p class="paragraph">
