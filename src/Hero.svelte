@@ -3,10 +3,15 @@
     import { onMount } from 'svelte';
 
     const options = {
-        strings: ['lifelong learner.', 'gamer.', 'loves building cool stuff.'],
+        strings: [
+            'lifelong learner.',
+            'TypeScript enthusiast.',
+            'loves building cool stuff.',
+        ],
         backDelay: 1800,
         backSpeed: 20,
         typeSpeed: 40,
+        startDelay: 1300,
     };
     let el;
     let typedObj = null;
