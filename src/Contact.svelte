@@ -1,0 +1,48 @@
+<script>
+</script>
+
+<style lang="scss">
+    @import './styles/theme.scss';
+
+    .container {
+        @include container;
+        @include flex(initial, center, $direction: column);
+        text-align: center;
+        height: calc(100vh - 130px);
+        min-height: 600px;
+        margin: 40px auto 0;
+        position: relative;
+        scroll-snap-align: start;
+        // scroll-margin-top: 120px;
+        & .content-block {
+            max-width: 90%;
+            width: 600px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(calc(-50% - 40px));
+            & .title {
+                margin-bottom: 6px;
+            }
+            & .content {
+                padding: 40px 0;
+            }
+            & .break {
+                height: 20px;
+            }
+        }
+    }
+</style>
+
+<div class="container" id="contact">
+    <div class="content-block">
+        <h1 class="title">Send me a message</h1>
+
+        <div class="content">
+            <p class="paragraph">
+                Feel free to get in touch with me regarding new projects or to
+                just say hi. I'll get back to you as soon as I can.
+            </p>
+            <div class="break" />
+        </div>
+    </div>
+</div>

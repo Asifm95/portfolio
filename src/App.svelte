@@ -22,5 +22,6 @@
     <Hero />
     <About />
     <Showcase />
+    <Contact />
     <Footer />
 </main>
