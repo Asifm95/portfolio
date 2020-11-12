@@ -1,9 +1,14 @@
 <script>
     import { links } from './model/links';
+    import { onMount } from 'svelte';
+    import { heroAnimation } from './animations.js';
 
     let ref;
     let scrolled;
 
+    onMount(() => {
+        heroAnimation();
+    });
     const handleScroll = (e) => {
         var s = window.scrollY;
         scrolled = s > 0;
@@ -17,6 +22,8 @@
         @include box-dim(100%, 140px);
         z-index: 4;
         transition: all 0.4s ease;
+        // background: transparent;
+        // opacity: 0;
         &.scrolled {
             background: black;
             height: 90px;
