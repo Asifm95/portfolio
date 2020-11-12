@@ -19,6 +19,7 @@
     "animejs": "^3.2.1",
     "feather-icons": "^4.28.0",
     "node-sass": "^5.0.0",
+    "scroll-out": "^2.2.12",
     "sirv-cli": "^1.0.0",
     "svelte-preprocess": "^4.5.2",
     "typed.js": "^2.0.11"
