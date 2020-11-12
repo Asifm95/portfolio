@@ -1,4 +1,9 @@
 <script>
+    import projects from './model/showcase';
+    import {
+        cardMouseLeaveAnimation,
+        cardMouseEnterAnimation,
+    } from './animations';
 </script>
 
 <style lang="scss">
@@ -9,6 +14,8 @@
         @include flex(initial, initial, $direction: column);
         margin: 40px auto 0;
         position: relative;
+        scroll-snap-align: start;
+        scroll-margin-top: 120px;
         & .title {
             margin-bottom: 6px;
         }
@@ -30,7 +37,21 @@
                 align-items: center;
                 height: 250px;
                 width: 100%;
+
                 & .content {
+                    position: relative;
+                    & .right {
+                        position: absolute;
+                        top: 12px;
+                        left: -12px;
+                        display: flex;
+                        align-items: center;
+                        opacity: 0;
+                        & .svg {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
                     & h2 {
                         font-weight: bold;
                         letter-spacing: -0.5px;
@@ -46,44 +67,24 @@
     }
 </style>
 
-<div class="container" id="showcase">
+<div class="showcase container" id="showcase" data-scroll>
     <h1 class="title">Showcase</h1>
     <div class="content-block">
-        <a href="https://www.blankwear.com/" class="block" target="blank">
-            <div class="content">
-                <h2>Blankwear</h2>
-                <p>A wholesale blank apparel E-commerce platform.</p>
-            </div>
-        </a>
-        <a href="https://storybrain.io/" class="block" target="blank">
-            <div class="content">
-                <h2>Storybrain</h2>
-                <p>
-                    Improve user engagement by evolving content with the help of
-                    AI.
-                </p>
-            </div>
-        </a>
-        <a
-            href="https://asifm95.github.io/react-spaces-ui/"
-            class="block"
-            target="blank">
-            <div class="content">
-                <h2>Spaces UI</h2>
-                <p>
-                    Inspired by the Invision Projects - Spaces iOS by @charles
-                    Patterson
-                </p>
-            </div>
-        </a>
-        <a
-            href="https://asifm95.github.io/react-color-palette"
-            class="block"
-            target="blank">
-            <div class="content">
-                <h2>Color Palette</h2>
-                <p>A flatuicolors inspired color palettes picker</p>
-            </div>
-        </a>
+        {#each projects as project (project.id)}
+            <a
+                href={project.link}
+                class="block"
+                target="blank"
+                on:mouseenter={cardMouseEnterAnimation}
+                on:mouseleave={cardMouseLeaveAnimation}>
+                <div class="content">
+                    <span class="right"><i
+                            data-feather="chevron-right"
+                            class="svg" /></span>
+                    <h2>{project.title}</h2>
+                    <p>{project.content}</p>
+                </div>
+            </a>
+        {/each}
     </div>
 </div>
