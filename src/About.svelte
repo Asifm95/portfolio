@@ -11,6 +11,8 @@
         min-height: 600px;
         margin: 40px auto 0;
         position: relative;
+        scroll-snap-align: start;
+        scroll-margin-top: 120px;
         & .content-block {
             max-width: 90%;
             width: 600px;
@@ -30,22 +32,21 @@
     }
 </style>
 
-<div class="container" id="about">
+<div class="container" id="about" data-scroll>
     <div class="content-block">
         <h1 class="title">About me</h1>
 
         <div class="content">
             <p class="paragraph">
-                Professionally connected with the web development industry and
-                information technology for many years.
+                I’m a front-end engineer based out of Dubai / Bangalore, and I
+                create fun, innovative, accessible, and fast web apps.
             </p>
             <div class="break" />
             <p class="paragraph">
-                Well-organised person, problem solver, independent employee with
-                high attention to detail. Fan of MMA, outdoor activities, TV
-                series and, recently, English literature. A family person,
-                father of two fractious boys, therefore remote employment is
-                preferred.
+                Well-organised person, problem solver, team player with high
+                attention to detail. Work mainly with Angular / React and
+                sometimes react-native for mobile applications. Fan of video
+                games, football and trekking.
             </p>
             <div class="break" />
             <p class="paragraph">
