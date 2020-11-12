@@ -5,9 +5,31 @@
     import Showcase from './Showcase.svelte';
     import Footer from './Footer.svelte';
     import feather from 'feather-icons';
-    import { onMount } from 'svelte';
+    import Contact from './Contact.svelte';
+    import { onMount, onDestroy } from 'svelte';
+    import ScrollOut from 'scroll-out';
+    import { triggerAnimation } from './animations.js';
 
-    onMount(() => feather.replace());
+    let scrollOutRef;
+
+    onMount(() => {
+        feather.replace();
+
+        scrollOutRef = ScrollOut({
+            // threshold: 200,
+            onShown: function (el) {
+                el.style.opacity = 1;
+                triggerAnimation(el.id);
+            },
+            onHidden: function (el) {
+                // hide the element initially
+                el.style.opacity = 0;
+            },
+        });
+    });
+    onDestroy(() => {
+        scrollOutRef.teardown();
+    });
 </script>
 
 <style lang="scss">
