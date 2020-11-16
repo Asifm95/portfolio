@@ -48,6 +48,7 @@
                     width: 650px;
                     @media (max-width: 600px) {
                         height: 300px;
+                        max-width: 85%;
                         min-height: 200px;
                         @include position(absolute, $top: 50%);
                         padding-bottom: 60px;
