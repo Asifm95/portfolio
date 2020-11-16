@@ -5,9 +5,10 @@
 
     let ref;
     let scrolled;
-
+    let show;
     onMount(() => {
         heroAnimation();
+        show = false;
     });
     const handleScroll = (e) => {
         var s = window.scrollY;
@@ -35,6 +36,9 @@
             @include flex(space-between, center);
             & .logo {
                 @include box-dim(60px, 55px);
+                @media (max-width: 600px) {
+                    @include box-dim(50px, 50px);
+                }
                 & img {
                     @include box-dim;
                 }
@@ -43,16 +47,53 @@
             & .nav-right {
                 @include flex;
                 height: 100%;
-                & .nav-link {
-                    padding: 0 24px;
-                    text-transform: capitalize;
-                    color: white;
-                    transition: all 0.4s ease;
-                    opacity: 1;
-                    &:hover {
-                        opacity: 0.6;
+                & .menu-icon {
+                    display: none;
+                    width: 19px;
+                    cursor: pointer;
+
+                    @media (max-width: 600px) {
+                        display: inherit;
                     }
                 }
+                & .nav-links {
+                    @media (max-width: 600px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        & .nav-links-mobile {
+            display: none;
+            transition: all 0.4s ease;
+            @media (max-width: 600px) {
+                @include flex(space-between, center);
+                background: #000;
+                position: fixed !important;
+                padding: 0px 20px;
+                height: 60px;
+                width: 100% !important;
+                z-index: -1;
+                left: 0;
+                top: 0;
+                opacity: 0;
+            }
+            &.show {
+                top: 90px;
+                opacity: 1;
+            }
+        }
+        & .nav-link {
+            padding: 0 24px;
+            text-transform: capitalize;
+            color: white;
+
+            opacity: 1;
+            @media (max-width: 600px) {
+                padding: 0;
+            }
+            &:hover {
+                opacity: 0.6;
             }
         }
     }
@@ -71,6 +112,13 @@
                     <a href={link.ref} class="nav-link">{link.label}</a>
                 {/each}
             </div>
+            <span class="menu-icon" on:click={() => (show = !show)}><i
+                    data-feather="menu" /></span>
         </div>
+    </div>
+    <div class:show class="nav-links-mobile">
+        {#each links as link}
+            <a href={link.ref} class="nav-link">{link.label}</a>
+        {/each}
     </div>
 </nav>
