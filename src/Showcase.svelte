@@ -10,7 +10,6 @@
     @import './styles/theme.scss';
 
     .container {
-        @include container;
         @include flex(initial, initial, $direction: column);
         margin: 40px auto 0;
         position: relative;
@@ -67,7 +66,7 @@
     }
 </style>
 
-<div class="showcase container" id="showcase" data-scroll>
+<div class="showcase container cmr" id="showcase" data-scroll>
     <h1 class="title">Showcase</h1>
     <div class="content-block">
         {#each projects as project (project.id)}

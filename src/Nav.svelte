@@ -22,8 +22,9 @@
         @include box-dim(100%, 140px);
         z-index: 4;
         transition: all 0.4s ease;
-        // background: transparent;
-        // opacity: 0;
+        @media (max-width: 600px) {
+            @include box-dim(100%, 90px);
+        }
         &.scrolled {
             background: black;
             height: 90px;
@@ -32,7 +33,6 @@
             top: 0;
             height: 100%;
             @include flex(space-between, center);
-            @include container;
             & .logo {
                 @include box-dim(60px, 55px);
                 & img {
@@ -61,7 +61,7 @@
 <svelte:window on:scroll={handleScroll} />
 
 <nav class="nav" class:scrolled bind:this={ref}>
-    <div class="container">
+    <div class="container cmr">
         <a href="/" class="logo">
             <img src="icons/signature1.svg" alt="asif" />
         </a>

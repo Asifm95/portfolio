@@ -10,7 +10,6 @@
         & .container {
             top: 0;
             height: 100%;
-            @include container;
             display: grid;
             align-items: center;
             grid-template-columns: 1fr 60% 1fr;
@@ -47,7 +46,7 @@
 </style>
 
 <footer class="footer">
-    <div class="container">
+    <div class="container cmr">
         <span class="date">©{new Date().getFullYear()}</span>
         <div class="logo-container">
             <a href="/" class="logo">

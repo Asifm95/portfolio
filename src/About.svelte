@@ -5,7 +5,6 @@
     @import './styles/theme.scss';
 
     .container {
-        @include container;
         @include flex(initial, initial, $direction: column);
         height: calc(100vh - 130px);
         min-height: 600px;
@@ -32,7 +31,7 @@
     }
 </style>
 
-<div class="container" id="about" data-scroll>
+<div class="container cmr" id="about" data-scroll>
     <div class="content-block">
         <h1 class="title">About me</h1>
 

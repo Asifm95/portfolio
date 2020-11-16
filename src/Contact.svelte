@@ -5,7 +5,7 @@
     @import './styles/theme.scss';
 
     .container {
-        @include container;
+        // @include container;
         @include flex(initial, center, $direction: column);
         text-align: center;
         height: calc(100vh - 130px);
@@ -41,7 +41,7 @@
     }
 </style>
 
-<div class="container" id="contact" data-scroll>
+<div class="container cmr" id="contact" data-scroll>
     <div class="content-block">
         <h1 class="title">Send me a message</h1>
 

@@ -27,7 +27,6 @@
         @include box-dim(100%, 100vh);
 
         & .container {
-            @include container;
             @include flex(initial, initial, $direction: column);
             height: 100%;
             position: relative;
@@ -59,7 +58,7 @@
 </style>
 
 <div class="hero">
-    <div class="container">
+    <div class="container cmr">
         <div class="hero-content">
             <h1 class="title">
                 UI / UX developer, front-end engineer,

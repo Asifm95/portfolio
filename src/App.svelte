@@ -33,6 +33,7 @@
 </script>
 
 <style lang="scss">
+    @import './styles/global.scss';
     main {
         width: 100%;
         height: 100%;

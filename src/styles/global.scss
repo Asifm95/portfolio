@@ -1,6 +1,7 @@
-.container {
-    position: relative;
-    max-width: 90%;
-    margin: 0 auto;
-    width: 1280px;
+@import './styles/theme.scss';
+:global(.cmr) {
+    @include container;
+    @media (max-width: 600px) {
+        max-width: 85%;
+    }
 }
