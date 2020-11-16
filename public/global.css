@@ -9,7 +9,7 @@
 
 html,
 body {
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y proximity; */
     scroll-behavior: smooth;
     position: relative;
     width: 100%;
