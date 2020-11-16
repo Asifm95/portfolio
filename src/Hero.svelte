@@ -32,10 +32,12 @@
             position: relative;
             & .hero-content {
                 @include flex(initial, flex-end);
-                @include position(absolute, $top: 50%);
-                @include box-dim(100%, 140px);
-                padding-bottom: 60px;
                 backface-visibility: hidden;
+                @media (min-width: 600px) {
+                    @include position(absolute, $top: 50%);
+                    @include box-dim(100%, 140px);
+                    padding-bottom: 60px;
+                }
                 opacity: 1;
                 & .title {
                     color: #fff;
@@ -44,6 +46,12 @@
                     font-size: clamp(22px, 5vw, 30px);
                     max-width: 90%;
                     width: 650px;
+                    @media (max-width: 600px) {
+                        height: 300px;
+                        min-height: 200px;
+                        @include position(absolute, $top: 50%);
+                        padding-bottom: 60px;
+                    }
                     & .typed {
                         color: #8f9ba8;
                     }
