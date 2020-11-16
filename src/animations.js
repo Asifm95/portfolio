@@ -117,6 +117,7 @@ export const ContactAnimation = () => {
             {
                 targets: mailPEl,
                 strokeDashoffset: [anime.setDashoffset, 0],
+                opacity: [0, 1],
             },
             '-=700'
         )
@@ -124,6 +125,7 @@ export const ContactAnimation = () => {
             {
                 targets: mailEl,
                 strokeDashoffset: [anime.setDashoffset, 0],
+                opacity: [0, 1],
                 easing: 'easeInOutSine',
             },
             '-=500'
