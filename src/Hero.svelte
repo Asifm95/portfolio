@@ -41,7 +41,7 @@
                     color: #fff;
                     letter-spacing: -1px;
                     line-height: 1.8;
-                    font-size: 30px;
+                    font-size: clamp(22px, 5vw, 30px);
                     max-width: 90%;
                     width: 650px;
                     & .typed {

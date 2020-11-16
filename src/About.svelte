@@ -20,9 +20,11 @@
             transform: translateY(calc(-50% - 40px));
             & .title {
                 margin-bottom: 6px;
+                font-size: clamp(26px, 5vw, 30px);
             }
             & .content {
                 padding: 40px 0;
+                font-size: clamp(12px, 4vw, 14px);
             }
             & .break {
                 height: 20px;

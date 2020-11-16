@@ -17,6 +17,7 @@
         scroll-margin-top: 120px;
         & .title {
             margin-bottom: 6px;
+            font-size: clamp(26px, 5vw, 30px);
         }
         & .content-block {
             padding: 40px 0;
@@ -54,7 +55,7 @@
                     & h2 {
                         font-weight: bold;
                         letter-spacing: -0.5px;
-                        font-size: 22px;
+                        font-size: clamp(18px, 4vw, 22px);
                     }
                     & p {
                         color: #8f9ba8;
