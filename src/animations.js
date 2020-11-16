@@ -86,9 +86,54 @@ export const ShowcaseAnimation = () => {
         );
 };
 
+export const ContactAnimation = () => {
+    let titleEl = document.querySelector('#contact .content-block .title');
+    let contentEl = document.querySelector(
+        '#contact .content-block .paragraph'
+    );
+    let mailEl = document.querySelectorAll('#contact .mail path');
+    let mailPEl = document.querySelectorAll('#contact .mail polyline');
+    anime.remove(titleEl);
+    anime.remove(mailEl);
+    anime.remove(mailPEl);
+
+    anime
+        .timeline({ easing: 'easeOutExpo' })
+        .add({
+            targets: titleEl,
+            translateY: [10, 0],
+            opacity: [0, 1],
+            delay: 300,
+        })
+        .add(
+            {
+                targets: contentEl,
+                translateY: [10, 0],
+                opacity: [0, 1],
+            },
+            '-=700'
+        )
+        .add(
+            {
+                targets: mailPEl,
+                strokeDashoffset: [anime.setDashoffset, 0],
+            },
+            '-=700'
+        )
+        .add(
+            {
+                targets: mailEl,
+                strokeDashoffset: [anime.setDashoffset, 0],
+                easing: 'easeInOutSine',
+            },
+            '-=500'
+        );
+};
+
 export const triggerAnimation = (id) => {
     if (id === 'about') AboutAnimation();
     if (id === 'showcase') ShowcaseAnimation();
+    if (id === 'contact') ContactAnimation();
 };
 
 export const cardMouseEnterAnimation = ({ target }) => {

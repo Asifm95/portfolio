@@ -12,7 +12,7 @@
         min-height: 600px;
         margin: 40px auto 0;
         position: relative;
-        scroll-snap-align: start;
+        // scroll-snap-align: start;
         // scroll-margin-top: 120px;
         & .content-block {
             max-width: 90%;
@@ -24,16 +24,24 @@
                 margin-bottom: 6px;
             }
             & .content {
-                padding: 40px 0;
+                padding: 40px 0 10px 0;
             }
             & .break {
                 height: 20px;
+            }
+            & a {
+                color: #8f9ba8;
+                & .mail {
+                    stroke-width: 1px;
+                    width: 35px;
+                    height: 35px;
+                }
             }
         }
     }
 </style>
 
-<div class="container" id="contact">
+<div class="container" id="contact" data-scroll>
     <div class="content-block">
         <h1 class="title">Send me a message</h1>
 
@@ -44,5 +52,8 @@
             </p>
             <div class="break" />
         </div>
+        <a href="mailto:asifm2882@gmail.com">
+            <i data-feather="mail" class="mail" />
+        </a>
     </div>
 </div>
