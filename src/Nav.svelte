@@ -5,10 +5,9 @@
 
     let ref;
     let scrolled;
-    let show;
+    let show = false;
     onMount(() => {
         heroAnimation();
-        show = false;
     });
     const handleScroll = (e) => {
         var s = window.scrollY;
@@ -118,7 +117,10 @@
     </div>
     <div class:show class="nav-links-mobile">
         {#each links as link}
-            <a href={link.ref} class="nav-link">{link.label}</a>
+            <a
+                href={link.ref}
+                class="nav-link"
+                on:click={() => (show = false)}>{link.label}</a>
         {/each}
     </div>
 </nav>
