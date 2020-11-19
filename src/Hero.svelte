@@ -50,7 +50,7 @@
                         height: 300px;
                         max-width: 85%;
                         min-height: 200px;
-                        @include position(absolute, $top: 50%);
+                        @include position(absolute, $bottom: 0);
                         padding-bottom: 60px;
                     }
                     & .typed {
