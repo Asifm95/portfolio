@@ -55,6 +55,12 @@
                     }
                     & .typed {
                         color: #8f9ba8;
+                        &::before {
+                            @media (max-width: 420px) {
+                                content: '';
+                                display: block;
+                            }
+                        }
                     }
                 }
             }
