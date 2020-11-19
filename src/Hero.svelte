@@ -48,15 +48,15 @@
                     width: 650px;
                     @media (max-width: 600px) {
                         height: 300px;
-                        max-width: 85%;
+                        max-width: 95%;
                         min-height: 200px;
-                        @include position(absolute, $bottom: 0);
+                        @include position(absolute, $bottom: 10px);
                         padding-bottom: 60px;
                     }
                     & .typed {
                         color: #8f9ba8;
                         &::before {
-                            @media (max-width: 420px) {
+                            @media (max-width: 350px) {
                                 content: '';
                                 display: block;
                             }
