@@ -5,7 +5,7 @@
     const options = {
         strings: [
             'lifelong learner.',
-            'TypeScript enthusiast.',
+            'TS enthusiast.',
             'loves building cool stuff.',
         ],
         backDelay: 1800,
