@@ -1,6 +1,23 @@
 <script>
 </script>
 
+<div class="container cmr" id="contact" data-scroll>
+    <div class="content-block">
+        <h1 class="title">Send me a message</h1>
+
+        <div class="content">
+            <p class="paragraph">
+                Feel free to get in touch with me regarding new projects or to
+                just say hi. I'll get back to you as soon as I can.
+            </p>
+            <div class="break" />
+        </div>
+        <a href="mailto:asifm2882@gmail.com">
+            <i data-feather="mail" class="mail" />
+        </a>
+    </div>
+</div>
+
 <style lang="scss">
     @import './styles/theme.scss';
 
@@ -44,20 +61,3 @@
         }
     }
 </style>
-
-<div class="container cmr" id="contact" data-scroll>
-    <div class="content-block">
-        <h1 class="title">Send me a message</h1>
-
-        <div class="content">
-            <p class="paragraph">
-                Feel free to get in touch with me regarding new projects or to
-                just say hi. I'll get back to you as soon as I can.
-            </p>
-            <div class="break" />
-        </div>
-        <a href="mailto:asifm2882@gmail.com">
-            <i data-feather="mail" class="mail" />
-        </a>
-    </div>
-</div>

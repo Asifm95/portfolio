@@ -1,6 +1,32 @@
 <script>
 </script>
 
+<footer class="footer">
+    <div class="container cmr">
+        <span class="date">©{new Date().getFullYear()}</span>
+        <div class="logo-container">
+            <a href="/" class="logo">
+                <img src="icons/signature1.svg" alt="asif" />
+            </a>
+        </div>
+        <div class="social">
+            <a href="https://www.instagram.com/asifmohd95/" target="blank"
+                ><i data-feather="instagram" class="icon" /></a
+            >
+            <a href="https://twitter.com/AsifMohd95" target="blank"
+                ><i data-feather="twitter" class="icon" /></a
+            >
+            <a
+                href="https://www.linkedin.com/in/asif-mohammed-18b2bb150/"
+                target="blank"><i data-feather="linkedin" class="icon" /></a
+            >
+            <a href="https://github.com/Asifm95/" target="blank"
+                ><i data-feather="github" class="icon" /></a
+            >
+        </div>
+    </div>
+</footer>
+
 <style lang="scss">
     @import './styles/theme.scss';
     .footer {
@@ -48,28 +74,3 @@
         }
     }
 </style>
-
-<footer class="footer">
-    <div class="container cmr">
-        <span class="date">©{new Date().getFullYear()}</span>
-        <div class="logo-container">
-            <a href="/" class="logo">
-                <img src="icons/signature1.svg" alt="asif" />
-            </a>
-        </div>
-        <div class="social">
-            <a href="https://www.instagram.com/asifmohd95/" target="blank"><i
-                    data-feather="instagram"
-                    class="icon" /></a>
-            <a href="https://twitter.com/AsifMohd95" target="blank"><i
-                    data-feather="twitter"
-                    class="icon" /></a>
-            <a
-                href="https://www.linkedin.com/in/asif-mohammed-18b2bb150/"
-                target="blank"><i data-feather="linkedin" class="icon" /></a>
-            <a href="https://github.com/Asifm95/" target="blank"><i
-                    data-feather="github"
-                    class="icon" /></a>
-        </div>
-    </div>
-</footer>

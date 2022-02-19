@@ -32,14 +32,6 @@
     });
 </script>
 
-<style lang="scss">
-    @import './styles/global.scss';
-    main {
-        width: 100%;
-        height: 100%;
-    }
-</style>
-
 <main>
     <Nav />
     <Hero />
@@ -48,3 +40,11 @@
     <Contact />
     <Footer />
 </main>
+
+<style lang="scss">
+    @import './styles/global.scss';
+    main {
+        width: 100%;
+        height: 100%;
+    }
+</style>
