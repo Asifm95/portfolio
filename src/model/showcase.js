@@ -20,26 +20,32 @@ export default [
     },
     {
         id: 4,
+        link: 'https://www.blankwear.com/',
+        title: 'Blankwear',
+        content: 'A wholesale blank apparel E-commerce platform.',
+    },
+    {
+        id: 5,
         link: 'https://www.blankwear.com/pct/bbf5a156-ebfb-493e-a31d-4108e5812bad/main-menu',
         title: 'PCT',
         content: 'An E-commerce product customisation tool.',
     },
     {
-        id: 5,
+        id: 6,
         link: 'https://storybrain.io/',
         title: 'Storybrain',
         content:
             'Improve user engagement by evolving content with the help of AI.',
     },
     {
-        id: 6,
+        id: 7,
         link: 'https://iprotectu.co.uk/',
         title: 'IProtectU',
         content:
             'EHS software solution to manage risk assessment and H&S compliance.',
     },
     {
-        id: 7,
+        id: 8,
         link: 'https://asifm95.github.io/react-spaces-ui/',
         title: 'Spaces UI',
         content:
